@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    background-color: theme('colors.page');
+    color: theme('colors.ink');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  html.dark, html.dark body {
+    background-color: theme('colors.ink');
+    color: theme('colors.paper');
+  }
+
+  ::selection { background: theme('colors.ink'); color: theme('colors.paper'); }
+  .dark ::selection { background: theme('colors.paper'); color: theme('colors.ink'); }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(26, 22, 18, 0.18) transparent;
+  }
+  .dark * {
+    scrollbar-color: rgba(245, 241, 230, 0.22) transparent;
+  }
+
+  *::-webkit-scrollbar { width: 6px; height: 6px; }
+  *::-webkit-scrollbar-track { background: transparent; }
+  *::-webkit-scrollbar-thumb {
+    background-color: rgba(26, 22, 18, 0.18);
+    border-radius: 9999px;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(26, 22, 18, 0.35);
+  }
+  *::-webkit-scrollbar-corner { background: transparent; }
+
+  .dark *::-webkit-scrollbar-thumb {
+    background-color: rgba(245, 241, 230, 0.22);
+  }
+  .dark *::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(245, 241, 230, 0.4);
+  }
+}

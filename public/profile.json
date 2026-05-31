@@ -1,110 +1,70 @@
 {
-  "user":{
-    "name":"William Manzoli",
-    "role":"Front End Engineer",
-    "about":"revolutionizes society transforming lives with futuristic possibilities.",
-    "flag":"brasil.png",
-    "living-at":"📍 São Paulo - SP",
-    "username":"wmanzoli",
-    "email":"williammanzoli@gmail.com"
+  "user": {
+    "name": "William Manzoli",
+    "role": "Brazilian Software Engineer",
+    "about": "revolutionizes society transforming lives with futuristic possibilities.",
+    "flag": "brasil.png",
+    "living-at": "📍 São Paulo - SP",
+    "username": "manzoliw",
+    "github": "manzoliw",
+    "x": "manzoliw",
+    "email": "william.manzoli@gmail.com"
   },
-  "jobs": {
-    "icons":[
-      {
-        "name": "Typescript",
-        "src": "typescript.png"
-      },
-      {
-        "name": "Vue",
-        "src": "vue.png"
-      },
-      {
-        "name": "React",
-        "src": "react.png"
-      },
-      {
-        "name": "Wordpress",
-        "src": "wordpress.png"
-      },
-      {
-        "name": "Node",
-        "src": "node.png"
-      },
-      {
-        "name": "Nest",
-        "src": "nest.png"
-      },
-      {
-        "name": "Git",
-        "src": "git.png"
-      },
-      {
-        "name": "AWS",
-        "src": "aws.png"
-      },
-      {
-        "name": "Datadog",
-        "src": "datadog.png"
-      }
-    ]
-  },
-  "companies":[
+  "experience": [
     {
-      "name":"intrinsiq",
-      "src":"intrinsiq.png",
-      "link":"https://www.intrinsiq.com.br",
-      "width": "60%"
+      "company": "ACT Digital",
+      "role": "Senior Frontend TypeScript Engineer",
+      "from": "Jul 2024",
+      "to": "Present",
+      "href": "https://actdigital.com",
+      "blurb": "Scaling micro-frontends for Latin America's leading digital bank. Architecting resilient internet banking interfaces and bridging AI-driven capabilities on core financial products.",
+      "metrics": []
     },
     {
-      "name":"singulare",
-      "src":"singulare.png",
-      "link":"https://www.singulare.com.br",
-      "width": "60%"
-    },
-    {
-      "name":"fasters",
-      "src":"fasters.png",
-      "link":"https://www.fasters.com.br",
-      "width": "80%"
+      "company": "Fasters",
+      "role": "Senior Frontend TypeScript Engineer",
+      "from": "Apr 2021",
+      "to": "Jul 2024",
+      "href": "https://www.fasters.com.br",
+      "blurb": "Architected critical fund-monitoring and banking systems routines. Optimized high-density data visualization and hardened security for enterprise-grade financial flows.",
+      "metrics": []
     }
   ],
-  "references":{
-    "blank": {
-      "picture":"blank-avatar.jpg"
-    },
+  "lastSyncedAt": "2026-05-21",
+  "references": {
     "linkedin": [
       {
-        "picture":"https://media.licdn.com/dms/image/D4D03AQFiJOjStpH_GQ/profile-displayphoto-shrink_100_100/0/1687464001709?e=1705536000&v=beta&t=kaQ3Tb6iSr6dL9_5XDLuRsMEJSG3--GsjmIGpdsoWvQ",
-        "name":"Raphael Fernandes Moreira",
-        "role":"Analista de Qualidade de Software | Cypress | JMeter",
-        "text":"Manzoli é um profissional engajado e comprometido com o seu trabalho, sempre prezando a comunicação e a qualidade. Com o seu jeito admirável e grandes conhecimentos, impulsiona e auxilia seus colegas de trabalhos."
+        "name": "Paloma Sena",
+        "role": "Marketing & Communications",
+        "date": "2024-11-13",
+        "text": "Studying with William was a really great experience. He's incredibly dedicated and always brought a positive energy that inspired everyone around him. I learned a lot from him — not just about the material, but from his approach and worldview. I have a lot of affection and gratitude for everything we shared during that time."
       },
       {
-        "picture":"https://media.licdn.com/dms/image/C4E03AQEM5fFzmIVGJA/profile-displayphoto-shrink_100_100/0/1562408205142?e=1705536000&v=beta&t=yWCKlomwO3QrO_icmt5T34qLme4L6iJLXggeX0mQjNg",
-        "name":"Thales Davila",
-        "role":"Senior Developer @ ADP",
-        "text":"Manzoli is such a great engineer. He always delivers tasks with excellent quality and value."
+        "name": "Herbert Leone Pinheiro",
+        "role": "Software Developer",
+        "date": "2023-07-04",
+        "text": "Manzoli is a fantastic front-end developer and a joy to work with! Their technical skills are exceptional, and their sense of humor brightens up the workplace. A fantastic addition to any team!"
       },
       {
-        "picture":"https://media.licdn.com/dms/image/C4D03AQE5mUXKIrMJqA/profile-displayphoto-shrink_100_100/0/1612837181820?e=1705536000&v=beta&t=51icFCwqj8tBQUh-qoOrdzeTMiA1n7KmqyQT-Ftvf5Y",
-        "name":"Misael Lima",
-        "role":"Software Developer | Vue | Node | Nest | TypeScript",
-        "text":"Manzoli, é um excelente profissional, está sempre buscando as melhores soluções e agregando valor de negócio aos projetos, sempre solicito a ajudar os colegas e buscando aprender mais e mais."
+        "name": "Thales Davila",
+        "role": "Senior Developer @ ADP",
+        "date": "2022-10-26",
+        "text": "Manzoli is such a great engineer. He always delivers tasks with excellent quality and value."
       },
       {
-        "picture":"https://media.licdn.com/dms/image/D4D03AQFUTCmKtnsehA/profile-displayphoto-shrink_100_100/0/1687713880990?e=1705536000&v=beta&t=gH0df6TI5uVn1ngffS0xsk42Dgnu_zcdbOYM1kRGvms",
-        "name":"Herbert Leone Pinheiro",
-        "role":"Software Developer | Node | Java | Vue.js | AWS | Kafka | Docker",
-        "text":"Manzoli is a fantastic front-end developer and a joy to work with! Their technical skills are exceptional, and their sense of humor brightens up the workplace. A fantastic addition to any team!"
+        "name": "Misael Lima",
+        "role": "Senior Software Developer",
+        "date": "2022-08-13",
+        "text": "Manzoli is an excellent professional — always seeking the best solutions and bringing real business value to projects, consistently willing to help colleagues and pushing himself to learn more and more."
       }
     ]
   },
-  "education":[
+  "education": [
     {
-      "course":"Analysis and systems development",
-      "university":"Centro Universitário FMU",
-      "date":"12/2020",
-      "src":"fmu.jpg"
+      "course": "Analysis and systems development",
+      "university": "Centro Universitário FMU",
+      "date": "12/2020",
+      "src": "fmu.jpg"
     }
   ]
 }

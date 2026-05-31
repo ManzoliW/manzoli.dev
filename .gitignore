@@ -91,5 +91,8 @@ sw.*
 # Vim swap files
 *.swp
 
+# npm lock file (this project uses Yarn)
+package-lock.json
+
 # Vercel
 .vercel

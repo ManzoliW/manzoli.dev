@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <clipPath id="email-clip"><rect width="200" height="200" rx="32"/></clipPath>
+  </defs>
+  <g clip-path="url(#email-clip)">
+    <rect width="200" height="200" fill="#f5f1e6"/>
+    <rect x="8" y="8" width="184" height="184" rx="26" fill="none" stroke="#1a1612" stroke-width="3" stroke-dasharray="3 5" opacity="0.35"/>
+    <g transform="translate(100 90)" stroke="#1a1612" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <rect x="-46" y="-26" width="92" height="58" rx="6"/>
+      <path d="M-46 -19 L0 16 L46 -19"/>
+    </g>
+    <text x="100" y="170" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#1a1612" letter-spacing="2.5">EMAIL</text>
+  </g>
+</svg>

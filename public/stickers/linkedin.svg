@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <clipPath id="li-clip"><rect width="200" height="200" rx="32"/></clipPath>
+  </defs>
+  <g clip-path="url(#li-clip)">
+    <rect width="200" height="200" fill="#f5f1e6"/>
+    <rect x="8" y="8" width="184" height="184" rx="26" fill="none" stroke="#1a1612" stroke-width="3" stroke-dasharray="3 5" opacity="0.35"/>
+    <text x="100" y="125" text-anchor="middle" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-weight="900" font-size="92" fill="#1a1612" letter-spacing="-3">in</text>
+    <text x="100" y="170" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#1a1612" letter-spacing="2.5">LINKEDIN</text>
+  </g>
+</svg>

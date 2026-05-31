@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <clipPath id="x-clip"><rect width="200" height="200" rx="32"/></clipPath>
+  </defs>
+  <g clip-path="url(#x-clip)">
+    <rect width="200" height="200" fill="#f5f1e6"/>
+    <rect x="8" y="8" width="184" height="184" rx="26" fill="none" stroke="#1a1612" stroke-width="3" stroke-dasharray="3 5" opacity="0.35"/>
+    <g transform="translate(56,52) scale(3.66)" fill="#1a1612">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>
+    </g>
+    <text x="100" y="180" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#1a1612" letter-spacing="6">X</text>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <clipPath id="ss-clip"><rect width="200" height="200" rx="32"/></clipPath>
+  </defs>
+  <g clip-path="url(#ss-clip)">
+    <rect width="200" height="200" fill="#f5f1e6"/>
+    <rect x="8" y="8" width="184" height="184" rx="26" fill="none" stroke="#1a1612" stroke-width="3" stroke-dasharray="3 5" opacity="0.35"/>
+    <g fill="#1a1612">
+      <rect x="60" y="50" width="80" height="11"/>
+      <rect x="60" y="70" width="80" height="11"/>
+      <path d="M60 90 L140 90 L140 140 L100 122 L60 140 Z"/>
+    </g>
+    <text x="100" y="180" text-anchor="middle" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#1a1612" letter-spacing="2.5">SUBSTACK</text>
+  </g>
+</svg>
