@@ -78,6 +78,37 @@ export default defineNuxtConfig({
           innerHTML: `(function(){try{var m=localStorage.getItem('vueuse-color-scheme');if(m==='dark'){document.documentElement.classList.add('dark');}}catch(e){}})();`,
           type: 'text/javascript',
         },
+        {
+          // Google Tag Manager
+          innerHTML: `(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+              'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+          })(window, document, 'script', 'dataLayer', 'GTM-NWGKQJF5');`,
+          type: 'text/javascript',
+        },
+        {
+          // Google tag (gtag.js)
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-MRC6DD50SG',
+          async: true,
+        },
+        {
+          innerHTML: `window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-MRC6DD50SG');`,
+          type: 'text/javascript',
+        },
+      ],
+      noscript: [
+        {
+          // Google Tag Manager (noscript)
+          children: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWGKQJF5" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
+          body: true,
+        },
       ],
     },
   },
