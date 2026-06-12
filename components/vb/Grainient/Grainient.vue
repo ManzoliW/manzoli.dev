@@ -238,14 +238,13 @@ onMounted(() => {
     const dt = Math.max(0, now - last) * 0.001;
     last = now;
     
-    if (!pausedRef.value) accumTime += dt * props.speed;
-    
     const visible = isVisibleRef.value && !document.hidden;
-    if (!visible) {
+    if (!visible || pausedRef.value) {
       raf = requestAnimationFrame(update);
       return;
     }
 
+    accumTime += dt * props.speed;
     program.uniforms.uTime.value = accumTime;
     renderer.render({ scene: meshRef.value! });
     raf = requestAnimationFrame(update);

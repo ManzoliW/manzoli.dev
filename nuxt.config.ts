@@ -2,7 +2,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     githubToken: process.env.GITHUB_TOKEN || '',
   },
-  modules: ['@nuxtjs/tailwindcss', 'motion-v/nuxt', '@nuxt/fonts', '@nuxt/image', '@nuxt/eslint'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/fonts', '@nuxt/image', '@nuxt/eslint'],
   css: ['~/assets/css/tailwind.css'],
   components: [
     { path: '~/components/vb', pathPrefix: false },
@@ -69,6 +69,8 @@ export default defineNuxtConfig({
       link: [
         { rel: 'canonical', href: 'https://www.manzoli.dev' },
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
       ],
       script: [
         {
@@ -94,6 +96,7 @@ export default defineNuxtConfig({
           // Google tag (gtag.js)
           src: 'https://www.googletagmanager.com/gtag/js?id=G-MRC6DD50SG',
           async: true,
+          defer: true,
         },
         {
           innerHTML: `window.dataLayer = window.dataLayer || [];

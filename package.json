@@ -33,9 +33,7 @@
 	},
 	"dependencies": {
 		"@vueuse/core": "^14.3.0",
-		"3dsvg": "^0.2.1",
 		"gsap": "^3.13.0",
-		"motion-v": "^2.2.1",
 		"ogl": "^1.0.11"
 	}
 }

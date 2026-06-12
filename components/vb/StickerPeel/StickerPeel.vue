@@ -279,7 +279,7 @@ const flippedLightingConstant = computed(() => props.lightingIntensity * 7);
 <template>
   <div
     ref="dragTargetRef"
-    :class="[`absolute cursor-grab active:cursor-grabbing transform-gpu ${className}`]"
+    :class="[`absolute cursor-grab active:cursor-grabbing transform-gpu will-change-transform ${className}`]"
     :style="cssVars"
   >
     <svg width="0" height="0">
@@ -324,7 +324,7 @@ const flippedLightingConstant = computed(() => props.lightingIntensity * 7);
     </svg>
 
     <div
-      class="relative touch-none sm:touch-auto select-none sticker-container"
+      class="relative touch-none sm:touch-auto select-none sticker-container will-change-transform backface-hidden"
       ref="containerRef"
       :style="{
         WebkitUserSelect: 'none',
