@@ -151,6 +151,9 @@ const layout = computed(() => {
                         :lighting-intensity="0.2"
                         :entrance-delay="0"
                         aria-label="William Manzoli"
+                        role="img"
+                        fetchpriority="high"
+                        loading="eager"
                     />
 
                     <!-- Social row — enters third (staggered 360–540ms) -->

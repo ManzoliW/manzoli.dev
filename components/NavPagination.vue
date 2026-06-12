@@ -7,10 +7,11 @@ const props = defineProps<{
 defineEmits<{ select: [index: number] }>();
 
 function getAriaLabel(i: number): string {
+    const roman = toRoman(i);
     if (props.labels && props.labels[i - 1]) {
-        return `Go to ${props.labels[i - 1]} section`;
+        return `Section ${roman}: ${props.labels[i - 1]}`;
     }
-    return `Go to section ${i}`;
+    return `Section ${roman}`;
 }
 
 function toRoman(n: number): string {

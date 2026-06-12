@@ -47,12 +47,10 @@ const prismaticBlend = computed(() =>
     currentIndex.value === 2 || isDarkMode.value ? 'screen' : 'color',
 );
 
-// Page reveal: wait for fonts + canvas components before fading in
+// Page reveal: wait for fonts before fading in
 const isReady = ref(false);
 onMounted(async () => {
     await document.fonts.ready;
-    // Give PrismaticBurst and Grainient time to initialise their canvas frames
-    await new Promise<void>((resolve) => setTimeout(resolve, 400));
     isReady.value = true;
 });
 
@@ -109,7 +107,7 @@ useHead({
                 aria-hidden="true"
                 class="pointer-events-none absolute inset-0 z-0 opacity-30"
             >
-                <Grainient
+                <LazyGrainient
                     :color1="(isDarkMode || currentIndex === 2) ? THEME.palettes.grainient.dark.color1 : THEME.palettes.grainient.light.color1"
                     :color2="(isDarkMode || currentIndex === 2) ? THEME.palettes.grainient.dark.color2 : THEME.palettes.grainient.light.color2"
                     :color3="(isDarkMode || currentIndex === 2) ? THEME.palettes.grainient.dark.color3 : THEME.palettes.grainient.light.color3"
@@ -130,6 +128,7 @@ useHead({
             type="button"
             class="fixed top-4 right-4 z-50 p-2 rounded-full backdrop-blur-md border transition-all hover:scale-110 active:scale-95 flex items-center gap-2 px-3 bg-ink/5 dark:bg-white/10 text-ink dark:text-white border-ink/10 dark:border-white/20"
             :class="currentIndex === 2 ? '!bg-white/10 !text-white !border-white/20' : ''"
+            :aria-label="`Switch to ${isDarkMode ? 'light' : 'dark'} mode`"
             @click="toggleTheme"
         >
             <div class="relative w-4 h-4">
@@ -196,7 +195,7 @@ useHead({
                     aria-hidden="true"
                     class="pointer-events-none absolute inset-0"
                 >
-                    <PrismaticBurst
+                    <LazyPrismaticBurst
                         :intensity="1"
                         :distort="4.0"
                         :speed="0.04"

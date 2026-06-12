@@ -17,6 +17,8 @@ interface StickerPeelProps {
   initialPosition?: 'center' | 'random' | { x: number; y: number };
   peelDirection?: number;
   className?: string;
+  fetchpriority?: 'high' | 'low' | 'auto';
+  loading?: 'eager' | 'lazy';
 }
 
 const props = withDefaults(defineProps<StickerPeelProps>(), {
@@ -29,7 +31,9 @@ const props = withDefaults(defineProps<StickerPeelProps>(), {
   lightingIntensity: 0.1,
   initialPosition: 'center',
   peelDirection: 0,
-  className: ''
+  className: '',
+  fetchpriority: 'auto',
+  loading: 'lazy'
 });
 
 const containerRef = useTemplateRef('containerRef');
@@ -274,6 +278,9 @@ const shadowImageStyle = computed(() => ({
 }));
 
 const flippedLightingConstant = computed(() => props.lightingIntensity * 7);
+
+const isSvg = computed(() => props.imageSrc.toLowerCase().endsWith('.svg'));
+const roundedWidth = computed(() => Math.round(props.width || 0));
 </script>
 
 <template>
@@ -337,18 +344,33 @@ const flippedLightingConstant = computed(() => props.lightingIntensity * 7);
     >
       <div class="sticker-main" :style="stickerMainStyle">
         <div :style="{ filter: 'url(#pointLight)' }">
-          <img :src="props.imageSrc" alt="" class="block" :style="imageStyle" draggable="false" @contextmenu.prevent />
+          <NuxtImg
+            :src="props.imageSrc"
+            alt=""
+            class="block"
+            :style="imageStyle"
+            draggable="false"
+            :fetchpriority="props.fetchpriority"
+            :loading="props.loading"
+            :width="roundedWidth"
+            :format="isSvg ? undefined : 'webp'"
+            @contextmenu.prevent
+          />
         </div>
 
 
         <div class="left-0 absolute w-full h-full sticker-flap" :style="flapStyle">
           <div :style="{ filter: 'url(#pointLightFlipped)' }">
-            <img
+            <NuxtImg
               :src="props.imageSrc"
               alt=""
               class="block"
               :style="shadowImageStyle"
               draggable="false"
+              :fetchpriority="props.fetchpriority"
+              loading="lazy"
+              :width="roundedWidth"
+              :format="isSvg ? undefined : 'webp'"
               @contextmenu.prevent
             />
           </div>

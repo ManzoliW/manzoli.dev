@@ -68,6 +68,7 @@ const stackLogos = stack.map((s) => ({ src: s.src, alt: s.alt }));
                                     : 'rounded-full',
                             ]"
                             loading="lazy"
+                            decoding="async"
                         >
                         <span
                             class="font-mono text-[12px] tracking-[0.02em] text-ink dark:text-paper group-hover:underline underline-offset-4 truncate"

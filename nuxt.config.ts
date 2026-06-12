@@ -115,6 +115,18 @@ export default defineNuxtConfig({
       ],
     },
   },
-  nitro: { preset: 'vercel-edge' },
+  nitro: {
+    preset: 'vercel-edge',
+    routeRules: {
+      '/**': {
+        headers: {
+          'X-Frame-Options': 'DENY',
+          'X-Content-Type-Options': 'nosniff',
+          'Referrer-Policy': 'strict-origin-when-cross-origin',
+          'Content-Security-Policy': "default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https:; font-src 'self' https: data:;",
+        },
+      },
+    },
+  },
   compatibilityDate: '2024-03-28',
 })
