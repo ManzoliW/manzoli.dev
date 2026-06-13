@@ -47,10 +47,13 @@ const prismaticBlend = computed(() =>
     currentIndex.value === 2 || isDarkMode.value ? 'screen' : 'color',
 );
 
-// Page reveal: wait for fonts before fading in
+// Page reveal: wait for fonts before fading in, with a 500ms fallback
 const isReady = ref(false);
 onMounted(async () => {
-    await document.fonts.ready;
+    await Promise.race([
+        document.fonts.ready,
+        new Promise((resolve) => setTimeout(resolve, 500))
+    ]);
     isReady.value = true;
 });
 
@@ -107,7 +110,7 @@ useHead({
                 aria-hidden="true"
                 class="pointer-events-none absolute inset-0 z-0 opacity-30"
             >
-                <LazyGrainient
+                <Grainient
                     :color1="(isDarkMode || currentIndex === 2) ? THEME.palettes.grainient.dark.color1 : THEME.palettes.grainient.light.color1"
                     :color2="(isDarkMode || currentIndex === 2) ? THEME.palettes.grainient.dark.color2 : THEME.palettes.grainient.light.color2"
                     :color3="(isDarkMode || currentIndex === 2) ? THEME.palettes.grainient.dark.color3 : THEME.palettes.grainient.light.color3"
@@ -195,7 +198,7 @@ useHead({
                     aria-hidden="true"
                     class="pointer-events-none absolute inset-0"
                 >
-                    <LazyPrismaticBurst
+                    <PrismaticBurst
                         :intensity="1"
                         :distort="4.0"
                         :speed="0.04"

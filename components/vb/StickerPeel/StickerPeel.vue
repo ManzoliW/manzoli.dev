@@ -278,9 +278,6 @@ const shadowImageStyle = computed(() => ({
 }));
 
 const flippedLightingConstant = computed(() => props.lightingIntensity * 7);
-
-const isSvg = computed(() => props.imageSrc.toLowerCase().endsWith('.svg'));
-const roundedWidth = computed(() => Math.round(props.width || 0));
 </script>
 
 <template>
@@ -344,7 +341,7 @@ const roundedWidth = computed(() => Math.round(props.width || 0));
     >
       <div class="sticker-main" :style="stickerMainStyle">
         <div :style="{ filter: 'url(#pointLight)' }">
-          <NuxtImg
+          <img
             :src="props.imageSrc"
             alt=""
             class="block"
@@ -352,8 +349,6 @@ const roundedWidth = computed(() => Math.round(props.width || 0));
             draggable="false"
             :fetchpriority="props.fetchpriority"
             :loading="props.loading"
-            :width="roundedWidth"
-            :format="isSvg ? undefined : 'webp'"
             @contextmenu.prevent
           />
         </div>
@@ -361,7 +356,7 @@ const roundedWidth = computed(() => Math.round(props.width || 0));
 
         <div class="left-0 absolute w-full h-full sticker-flap" :style="flapStyle">
           <div :style="{ filter: 'url(#pointLightFlipped)' }">
-            <NuxtImg
+            <img
               :src="props.imageSrc"
               alt=""
               class="block"
@@ -369,8 +364,6 @@ const roundedWidth = computed(() => Math.round(props.width || 0));
               draggable="false"
               :fetchpriority="props.fetchpriority"
               loading="lazy"
-              :width="roundedWidth"
-              :format="isSvg ? undefined : 'webp'"
               @contextmenu.prevent
             />
           </div>
